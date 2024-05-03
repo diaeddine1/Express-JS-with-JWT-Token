@@ -43,7 +43,7 @@ Router.post("/login",async(req,res)=>{
         console.log(req.body)
         const {username} = req.body
         console.log(username)
-        const token = jwt.sign({ username: username }, process.env.secret, { expiresIn: '1h' });
+        const token = jwt.sign({ username: username }, process.env.secret, { expiresIn: '7d' });
         res.json({token:token})
     }catch(error){
         console.log(error)
