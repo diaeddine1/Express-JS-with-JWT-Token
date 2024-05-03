@@ -43,7 +43,7 @@ const router = express.Router()
 
 
 
-router.get("/all_items",authenticate,itemscontroller.getAllItems)
+router.get("/all_items",itemscontroller.getAllItems)
 
 
 /**
